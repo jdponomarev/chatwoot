@@ -71,6 +71,7 @@ export default {
       color: #000;
       vertical-align: middle;
       line-height: 30px;
+      cursor:pointer;
       img{
         width: 100%;
       }
