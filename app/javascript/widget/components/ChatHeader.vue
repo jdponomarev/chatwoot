@@ -14,6 +14,9 @@
 <script>
 import { mapGetters } from 'vuex';
 import { IFrameHelper } from 'widget/helpers/utils';
+import axios from 'axios';
+
+export const dailyApi = axios.create({});
 
 export default {
   name: 'ChatHeader',
@@ -40,8 +43,15 @@ export default {
         });
       }
     },
-    createRoom(){
+    async createRoom(){
       alert();
+      let dailyData = dailyApi.post({
+        url:"https://api.daily.co/v1/rooms",
+        headers:{
+          "Authorization":"Bearer 8db0f40c7ca017bbc43791ee3744bc9ac6d36200951dfb2ce0eb4ebf95a353bb"
+        }
+      });
+      console.log("dailyData",dailyData)
     }
   },
 };
