@@ -3,7 +3,7 @@
     <div class="header-branding">
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
       <h2 class="title" v-html="title"></h2>
-      <div class="header-call">
+      <div class="header-call @click="createRoom"">
         <img src="https://misc.hb.bizmrg.com/icons8-video-message-48.png" />
       </div>
     </div>
@@ -40,6 +40,9 @@ export default {
         });
       }
     },
+    createRoom(){
+      alert();
+    }
   },
 };
 </script>
