@@ -73,7 +73,7 @@ export default {
       }
     },
     async createRoom(){
-      if(confirm("Вы действительно хотите начать видео чат?"){
+      if(confirm("Вы действительно хотите начать видео чат?")){
         let dailyData = await axios({
           method: 'POST',
           url:"https://api.daily.co/v1/rooms",
