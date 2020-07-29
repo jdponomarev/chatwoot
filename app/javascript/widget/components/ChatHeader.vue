@@ -12,11 +12,40 @@
 </template>
 
 <script>
+
 import { mapGetters } from 'vuex';
 import { IFrameHelper } from 'widget/helpers/utils';
 import axios from 'axios';
+import {
+  sendMessageAPI,
+  getMessagesAPI,
+  sendAttachmentAPI,
+  toggleTyping,
+  setUserLastSeenAt,
+} from 'widget/api/conversation';
 
 export const dailyApi = axios.create({});
+
+
+
+export const createTemporaryMessage = ({ attachments, content }) => {
+  const timestamp = new Date().getTime() / 1000;
+  return {
+    id: getUuid(),
+    content,
+    attachments,
+    status: 'in_progress',
+    created_at: timestamp,
+    message_type: MESSAGE_TYPE.INCOMING,
+  };
+};
+
+//sendMessage: async ({ commit }, params) => {
+//    const { content } = params;
+//    commit('pushMessageToConversation', createTemporaryMessage({ content }));
+//    await sendMessageAPI(content);
+//},
+
 
 export default {
   name: 'ChatHeader',
