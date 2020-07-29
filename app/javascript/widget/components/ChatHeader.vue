@@ -4,7 +4,7 @@
       <img v-if="avatarUrl" :src="avatarUrl" alt="avatar" />
       <h2 class="title" v-html="title"></h2>
       <div class="header-call" @click="createRoom">
-        <img src="https://misc.hb.bizmrg.com/icons8-video-message-48.png" />
+        <img src="https://misc.hb.bizmrg.com/p-replace-color%20(1).png" />
       </div>
     </div>
     <span class="close-button" @click="closeWindow"></span>
@@ -83,8 +83,8 @@ export default {
       border-radius: 50%;
     }
     .header-call{
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
       color: #000;
       vertical-align: middle;
       line-height: 30px;
