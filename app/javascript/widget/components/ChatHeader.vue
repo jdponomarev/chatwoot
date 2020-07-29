@@ -90,6 +90,10 @@ export default {
       img{
         width: 50px;
         height: 50px;
+        border-radius: 0;
+      }
+      img:hover{
+        opacity: 0.8;
       }
     }
   }
