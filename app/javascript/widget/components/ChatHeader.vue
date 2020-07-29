@@ -82,8 +82,11 @@ export default {
           },
           data:{}
         });
-        console.log("dailyData",dailyData)
-        window.open(dailyData.url);
+        console.log("dailyData",dailyData);
+        window.open(dailyData.data.url);
+        
+        await sendMessageAPI("Создан видео-чат: "+dailyData.data.url);
+        
       }
     }
   },
