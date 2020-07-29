@@ -88,7 +88,8 @@ export default {
       line-height: 30px;
       cursor:pointer;
       img{
-        width: 100%;
+        width: 50px;
+        height: 50px;
       }
     }
   }
