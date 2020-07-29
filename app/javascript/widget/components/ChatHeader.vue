@@ -45,11 +45,13 @@ export default {
     },
     async createRoom(){
       alert();
-      let dailyData = dailyApi.post({
+      let dailyData = axios({
+        method: 'POST',
         url:"https://api.daily.co/v1/rooms",
         headers:{
           "Authorization":"Bearer 8db0f40c7ca017bbc43791ee3744bc9ac6d36200951dfb2ce0eb4ebf95a353bb"
-        }
+        },
+        data:{}
       });
       console.log("dailyData",dailyData)
     }
