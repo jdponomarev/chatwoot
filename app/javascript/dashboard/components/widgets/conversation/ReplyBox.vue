@@ -38,7 +38,7 @@
       />
 
       <i
-        class="icon ion-videocamp-outline"
+        class="icon ion-videocamera-outline"
         @click="startVideoCall"
       />
     </div>
