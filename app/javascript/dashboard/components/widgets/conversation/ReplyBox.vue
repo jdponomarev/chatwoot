@@ -38,7 +38,7 @@
       />
 
       <i
-        class="icon ion-videocamera-outline"
+        class="icon ion-chatbubble"
         @click="startVideoCall"
       />
     </div>
@@ -313,25 +313,26 @@ export default {
       this.message = '';
     },
     async startVideoCall(){
+      if(confirm("Вы действительно хотите начать видео чат?")){
+        let dailyData = await axios({
+            method: 'POST',
+            url:"https://api.daily.co/v1/rooms",
+            headers:{
+              "Authorization":"Bearer 3da1f8c99ff586c587dae2c298cd05880f90a31051696c0cd8b4683b2bc5a20e"
+            },
+            data:{}
+          });
+          console.log("dailyData",dailyData);
+          window.open(dailyData.data.url);
+          
+          //await sendMessageAPI();
 
-      let dailyData = await axios({
-          method: 'POST',
-          url:"https://api.daily.co/v1/rooms",
-          headers:{
-            "Authorization":"Bearer 3da1f8c99ff586c587dae2c298cd05880f90a31051696c0cd8b4683b2bc5a20e"
-          },
-          data:{}
-        });
-        console.log("dailyData",dailyData);
-        window.open(dailyData.data.url);
-        
-        //await sendMessageAPI();
-
-        await this.$store.dispatch('sendMessage', {
-            conversationId: this.currentChat.id,
-            message: "Создан видео-чат: "+dailyData.data.url,
-            private: false
-        });
+          await this.$store.dispatch('sendMessage', {
+              conversationId: this.currentChat.id,
+              message: "Создан видео-чат: "+dailyData.data.url,
+              private: false
+          });
+      }
     },
     toggleEmojiPicker() {
       this.showEmojiPicker = !this.showEmojiPicker;
