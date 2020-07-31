@@ -36,6 +36,11 @@
         :class="{ active: showEmojiPicker }"
         @click="toggleEmojiPicker"
       />
+
+      <i
+        class="icon ion-videocamp-outline"
+        @click="startVideoCall"
+      />
     </div>
 
     <div class="reply-box__bottom">
@@ -96,6 +101,7 @@ import {
   hasPressedShift,
 } from 'shared/helpers/KeyboardHelpers';
 import { MESSAGE_MAX_LENGTH } from 'shared/helpers/MessageTypeHelper';
+import axios from 'axios';
 
 export default {
   components: {
@@ -305,6 +311,27 @@ export default {
     },
     clearMessage() {
       this.message = '';
+    },
+    startVideoCall(){
+
+      let dailyData = await axios({
+          method: 'POST',
+          url:"https://api.daily.co/v1/rooms",
+          headers:{
+            "Authorization":"Bearer 8db0f40c7ca017bbc43791ee3744bc9ac6d36200951dfb2ce0eb4ebf95a353bb"
+          },
+          data:{}
+        });
+        console.log("dailyData",dailyData);
+        window.open(dailyData.data.url);
+        
+        //await sendMessageAPI();
+
+        await this.$store.dispatch('sendMessage', {
+            conversationId: this.currentChat.id,
+            message: "Создан видео-чат: "+dailyData.data.url,
+            private: false
+        });
     },
     toggleEmojiPicker() {
       this.showEmojiPicker = !this.showEmojiPicker;
