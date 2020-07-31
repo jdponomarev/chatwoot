@@ -2,7 +2,7 @@
   <aside class="sidebar animated shrink columns">
     <div class="logo">
       <router-link :to="dashboardPath" replace>
-        <img :src="globalConfig.logo" :alt="globalConfig.installationName" />
+        <img src="https://static.tildacdn.com/tild3563-3735-4033-b839-386261353963/LOGOSCMblue.png" :alt="globalConfig.installationName" />
       </router-link>
     </div>
 
