@@ -312,7 +312,7 @@ export default {
     clearMessage() {
       this.message = '';
     },
-    startVideoCall(){
+    async startVideoCall(){
 
       let dailyData = await axios({
           method: 'POST',
