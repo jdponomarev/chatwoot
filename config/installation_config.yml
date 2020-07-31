@@ -1,9 +1,9 @@
 - name: LOGO_THUMBNAIL
   value: '/brand-assets/logo_thumbnail.svg'
 - name: LOGO
-  value: '/brand-assets/logo.svg'
+  value: 'https://static.tildacdn.com/tild3563-3735-4033-b839-386261353963/LOGOSCMblue.png'
 - name: INSTALLATION_NAME
-  value: 'Chatwoot'
+  value: 'Sport Casual Moscow'
 - name: BRAND_URL
   value: 'https://www.chatwoot.com'
 - name: WIDGET_BRAND_URL

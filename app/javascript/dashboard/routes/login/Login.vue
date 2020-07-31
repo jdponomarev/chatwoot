@@ -2,7 +2,7 @@
   <div class="medium-12 column login">
     <div class="text-center medium-12 login__hero align-self-top">
       <img
-        :src="globalConfig.logo"
+        src="https://static.tildacdn.com/tild3563-3735-4033-b839-386261353963/LOGOSCMblue.png"
         :alt="globalConfig.installationName"
         class="hero__logo"
       />

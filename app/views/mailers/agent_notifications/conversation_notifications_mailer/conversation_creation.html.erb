@@ -1,10 +1,10 @@
-<p>Hi <%= @agent.name %>,</p>
+<p><%= @agent.name %>, здравствуйте!</p>
 
-<p>Time to save the world. A new conversation has been created in <%= @conversation.inbox.name %></p>
+<p>Новый диалог создан!</p>
 
 <p>
-Click <%=
-  link_to 'here',
+Нажмите <%=
+  link_to 'здесь',
   app_account_conversation_url(account_id: @conversation.account_id, id: @conversation.display_id)
-%> to get cracking.
+%> чтобы перейти к диалогу
 </p>
