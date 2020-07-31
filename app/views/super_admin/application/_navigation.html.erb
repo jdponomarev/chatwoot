@@ -21,7 +21,9 @@ as defined by the routes in the `admin/` namespace
 
 <div class="navigation" role="navigation">
   <div class="logo-brand">
-    <%= link_to image_tag('/brand-assets/logo.svg', alt: 'Chatwoot Admin Dashboard'), super_admin_root_url %>
+    <a href="/app/accounts/3/dashboard">
+      <img src="https://static.tildacdn.com/tild3064-3439-4230-b165-353933343736/logo.png" />
+    </a>
     <div class="app-version">v<%= Chatwoot.config[:version] %></div>
   </div>
 

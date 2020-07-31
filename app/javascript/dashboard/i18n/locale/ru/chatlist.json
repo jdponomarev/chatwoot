@@ -22,12 +22,12 @@
     ],
     "ASSIGNEE_TYPE_TABS": [
       {
-        "NAME": "Мой",
+        "NAME": "Мои",
         "KEY": "me",
         "COUNT_KEY": "mineCount"
       },
       {
-        "NAME": "Неназначенный",
+        "NAME": "Нераспределенные",
         "KEY": "unassigned",
         "COUNT_KEY": "unAssignedCount"
       },
