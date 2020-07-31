@@ -12,6 +12,7 @@ import ro from './locale/ro';
 import fa from './locale/fa';
 import ta from './locale/ta';
 import it from './locale/it';
+import ru from './locale/ru';
 
 export default {
   ca,
@@ -28,4 +29,5 @@ export default {
   fa,
   ta,
   it,
+  ru
 };

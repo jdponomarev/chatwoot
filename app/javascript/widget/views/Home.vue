@@ -19,7 +19,6 @@
       <div v-if="showInputTextArea" class="input-wrap">
         <ChatFooter />
       </div>
-      <branding></branding>
     </div>
   </div>
 </template>
