@@ -318,7 +318,7 @@ export default {
           method: 'POST',
           url:"https://api.daily.co/v1/rooms",
           headers:{
-            "Authorization":"Bearer 8db0f40c7ca017bbc43791ee3744bc9ac6d36200951dfb2ce0eb4ebf95a353bb"
+            "Authorization":"Bearer 3da1f8c99ff586c587dae2c298cd05880f90a31051696c0cd8b4683b2bc5a20e"
           },
           data:{}
         });
